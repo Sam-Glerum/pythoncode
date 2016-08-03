@@ -1,7 +1,5 @@
 import os
 
-import pygame
-
 
 class Player(object):
     """Player Class."""
@@ -14,9 +12,10 @@ class Player(object):
         pass
 
     def first_time(self):
-        name_input = raw_input("What is your name? ")
-        Player.player_stats['name']  # = name_input
-        return name_input
+        self.name_input = raw_input("What is your name? ")
+        for x in self.name_input:
+            x.upper()
+        Player.player_stats['name'] = self.name_input
 
     def show_stats(self):
         print "-" * \
@@ -46,3 +45,4 @@ running = True
 testobj = Player()
 while running:
     testobj.first_time()
+    testobj.show_stats()
