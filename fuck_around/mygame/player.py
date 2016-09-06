@@ -1,7 +1,10 @@
 import os
 
+<<<<<<< HEAD
 # import pygame
 
+=======
+>>>>>>> 9bfc5edbe9e11a6f06f1ed5acdd38c07979c7f11
 
 class Player(object):
     """Player Class."""
@@ -14,6 +17,7 @@ class Player(object):
         pass
 
     def first_time(self):
+<<<<<<< HEAD
         name_input = raw_input("What is your name? ")
         if len(name_input) > 0:
             Player.player_stats['name'] = name_input
@@ -21,6 +25,12 @@ class Player(object):
             os.system('clear')
             print "Please enter your name"
             self.first_time()
+=======
+        self.name_input = raw_input("What is your name? ")
+        for x in self.name_input:
+            x.upper()
+        Player.player_stats['name'] = self.name_input
+>>>>>>> 9bfc5edbe9e11a6f06f1ed5acdd38c07979c7f11
 
     def show_stats(self):
         print "-" * \
@@ -50,6 +60,12 @@ class Game(Player):
 
 running = True
 testobj = Player()
+<<<<<<< HEAD
 testobj.first_time()
 os.system('clear')
 testobj.show_stats()
+=======
+while running:
+    testobj.first_time()
+    testobj.show_stats()
+>>>>>>> 9bfc5edbe9e11a6f06f1ed5acdd38c07979c7f11
