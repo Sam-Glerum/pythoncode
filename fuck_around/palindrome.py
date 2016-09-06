@@ -2,8 +2,7 @@ def palindrome(s):
 	split_string = s.split(" ")
 
 	for word in split_string:
-		if word == word[::-1]:
-			print "palindrome!"
+		print word[::-1]
 
 
 palindrome("fuck yeah racecar")
@@ -15,7 +14,7 @@ def longest_palindrome (s):
     split_string = s.split(" ")
     if len(s) <= 0:
         return 0
-    
+
     else:
         for word in split_string:
             #check if word is a palindrome
@@ -23,7 +22,7 @@ def longest_palindrome (s):
                 print word
                 return len(word)
             else:
-                return len(word) - 1 
-            
+                return len(word) - 1
+
     pass
 '''
