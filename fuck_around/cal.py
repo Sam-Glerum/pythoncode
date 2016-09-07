@@ -56,6 +56,8 @@ class Calc_Options():
             x = raw_input(">")
             if x.isdigit():
                 num_list.append(float(x))
+            else:
+                print "Not a valid number!"
             if x == "=":
                 print "Total: {}".format(sum(num_list))
                 break
