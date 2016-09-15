@@ -1,10 +1,9 @@
-testfile = open('test.txt')
+testfile = open('test.txt', 'r+')
 
 # print "name :", testfile.read()
 
 name = "sam"
 
-for x in testfile.read(10):
-    print x
+testfile.write("ello m8")
 
 testfile.close()
